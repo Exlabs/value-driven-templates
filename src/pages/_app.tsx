@@ -3,6 +3,7 @@ import NextApp from 'next/app';
 import Head from 'next/head';
 
 import '../../.css/antd.less';
+import { ThemeProvider } from '../providers/theme.provider';
 
 export default class App extends NextApp {
   componentDidMount() {
@@ -25,7 +26,9 @@ export default class App extends NextApp {
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
         </Head>
-        <Component {...pageProps} key={router.route} />
+        <ThemeProvider>
+          <Component {...pageProps} key={router.route} />
+        </ThemeProvider>
       </>
     );
   }
