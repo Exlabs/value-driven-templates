@@ -2,7 +2,7 @@ import React from 'react';
 import Tag from './tag.component';
 import { ThemeProvider } from '../../providers/theme.provider';
 import { action } from '@storybook/addon-actions';
-import { text, withKnobs } from '@storybook/addon-knobs';
+import { text, withKnobs, boolean } from '@storybook/addon-knobs';
 
 export default {
   title: 'Tag',
@@ -27,7 +27,9 @@ export default {
   ],
 };
 
-export const Default = () => <Tag active>{text('text', '#Decision making')}</Tag>;
+export const Default = () => (
+  <Tag active={boolean('active', true)}>{text('text', '#Decision making')}</Tag>
+);
 
 export const Checkable = () => (
   <Tag.Checkable active onClick={action('onClick')}>

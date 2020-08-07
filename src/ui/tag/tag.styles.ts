@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledTag = styled.span.attrs(
   ({ active }: { active?: boolean }) => active || false
 )`
+  display: inline-block;
   background-color: ${({ theme, active }) =>
     active ? theme.color.primary400 : theme.color.gray400};
   color: ${({ theme, active }) => (active ? theme.color.primary : theme.color.gray)};
