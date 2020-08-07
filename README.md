@@ -1,5 +1,6 @@
 # 🛠 Value Driven Templates
 
+![Test](https://github.com/Exlabs/value-driven-templates/workflows/Test/badge.svg)
 ![Lint](https://github.com/Exlabs/value-driven-templates/workflows/Lint/badge.svg)
 ![Production Build](https://github.com/Exlabs/value-driven-templates/workflows/Production%20Build/badge.svg)
 

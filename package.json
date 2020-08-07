@@ -7,7 +7,15 @@
     "lint": "eslint './**/*.{ts,tsx}' && echo 'lint success'",
     "typecheck": "tsc --noEmit",
     "lint:fix": "eslint --fix './**/*.{ts,tsx}' && echo 'lint success'",
-    "version": "conventional-changelog -p emojis -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
+    "version": "conventional-changelog -p emojis -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "storybook": "ASSET_PREFIX= start-storybook -c .storybook -s ./public",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage --forceExit"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/test-setup.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,20 +55,34 @@
     "next": "^9.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-inlinesvg": "^2.0.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^26.0.8",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.43",
+    "@types/react-inlinesvg": "^1.0.0",
     "@types/styled-components": "^5.1.1",
     "@typescript-eslint/eslint-plugin": "^3.7.1",
     "@typescript-eslint/parser": "^3.7.1",
     "@zeit/next-less": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.2.2",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
     "conventional-changelog-cli": "^2.0.34",
     "conventional-changelog-core": "^4.1.7",
     "conventional-changelog-emojis": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.5.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -70,6 +92,7 @@
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
     "husky": "^4.2.5",
+    "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
