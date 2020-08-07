@@ -8,7 +8,7 @@
     "typecheck": "tsc --noEmit",
     "lint:fix": "eslint --fix './**/*.{ts,tsx}' && echo 'lint success'",
     "version": "conventional-changelog -p emojis -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "storybook": "ASSET_PREFIX= start-storybook -c .storybook -s ./public",
+    "storybook": "ASSET_PREFIX=  start-storybook -c .storybook -s ./public",
     "test": "jest",
     "test:ci": "jest --ci --coverage --forceExit"
   },
