@@ -11,7 +11,8 @@
     "storybook": "ASSET_PREFIX=  start-storybook -c .storybook -s ./public",
     "test": "jest",
     "test:ci": "jest --ci --coverage --forceExit",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "deploy": "NODE_ENV=production rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -92,10 +93,12 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "gh-pages": "^3.1.0",
     "husky": "^4.2.5",
     "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
   }
 }
