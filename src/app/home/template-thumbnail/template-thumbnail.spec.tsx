@@ -39,7 +39,7 @@ describe('<TemplateThumbnail /> Component', () => {
       templateUrl,
     });
 
-    expect(wrapper.find('h2').first().text()).toEqual(title);
+    expect(wrapper.find('h3').first().text()).toEqual(title);
     expect(wrapper.find('p').first().text()).toEqual(description);
     expect(wrapper.find(TemplateThumbnail).prop('templateUrl')).toEqual(templateUrl);
   });
