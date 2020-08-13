@@ -28,7 +28,7 @@ export const TemplateImage = styled.img`
   height: 200px;
 `;
 
-export const TemplateTitle = styled.h2`
+export const TemplateTitle = styled.h3`
   font-size: 25px;
   font-weight: 700;
 
