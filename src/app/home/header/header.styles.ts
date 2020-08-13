@@ -5,7 +5,6 @@ export const HeaderContainer = styled(motion.header)`
   font-size: 60px;
   text-align: center;
   font-weight: 700;
-  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,10 +12,8 @@ export const HeaderContainer = styled(motion.header)`
   width: 100%;
   height: calc(100vh - 90px);
   position: relative;
-
-  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    height: auto;
-  }
+  opacity: 0;
+  animation: showHeader 1s forwards;
 
   p {
     color: ${({ theme }) => theme.color.fontSecondary};
@@ -26,7 +23,7 @@ export const HeaderContainer = styled(motion.header)`
     opacity: 0;
 
     @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-      font-size: 11px;
+      font-size: 13px;
       margin-bottom: 10px;
     }
   }
@@ -40,42 +37,20 @@ export const HeaderContainer = styled(motion.header)`
     }
 
     @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-      max-width: 90%;
-      font-size: 25px;
+      max-width: 100%;
+      font-size: 27px;
     }
   }
 
   a {
     font-size: 23px;
     margin-top: 35px;
-    animation: showButton 0.5s forwards;
+    animation: moveUp 0.5s forwards;
     animation-delay: 1s;
     opacity: 0;
 
     @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
       font-size: 14px;
-    }
-  }
-
-  @keyframes showButton {
-    0% {
-      transform: translateY(30px);
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes moveDown {
-    0% {
-      transform: translateY(-50px);
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
     }
   }
 `;
@@ -89,16 +64,6 @@ export const PoweredByText = styled.h3`
 
   & > span {
     color: ${({ theme }) => theme.color.primary};
-  }
-
-  @keyframes showText {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 0.5;
-    }
   }
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {

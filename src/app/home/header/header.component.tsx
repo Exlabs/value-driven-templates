@@ -5,15 +5,7 @@ import { Link } from '../../../ui/link/link.component';
 
 export const Header = () => {
   return (
-    <HeaderContainer
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        delay: 0,
-        duration: 1,
-      }}
-    >
+    <HeaderContainer>
       <p>We provide collection of quality frameworks and templates.</p>
       <h2>
         Decision making <Highlight>templates</Highlight> with
