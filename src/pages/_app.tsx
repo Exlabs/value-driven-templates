@@ -1,17 +1,10 @@
 import React from 'react';
 import NextApp from 'next/app';
 import Head from 'next/head';
-import styled from 'styled-components';
-
-import '../../.css/antd.less';
-
 import { ThemeProvider } from '../providers/theme.provider';
 
-const AppContainer = styled.div`
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 10px 20px;
-`;
+import '../../.css/antd.less';
+import { LayoutProvider } from '../providers/layout.provider';
 
 export default class App extends NextApp {
   componentDidMount() {
@@ -35,9 +28,9 @@ export default class App extends NextApp {
           />
         </Head>
         <ThemeProvider>
-          <AppContainer>
+          <LayoutProvider>
             <Component {...pageProps} key={router.route} />
-          </AppContainer>
+          </LayoutProvider>
         </ThemeProvider>
       </>
     );

@@ -5,6 +5,12 @@ export const StyledNavigation = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: ${({ theme }) => theme.color.background};
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.color.fontPrimary};
+  }
 `;
 
 export const Logo = styled.h1`

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navigation } from '../../ui/navigation/navigation.component';
 import { Header } from './header/header.component';
 
 interface TemplateThumnbail {
@@ -14,10 +13,5 @@ interface HomeProps {
 }
 
 export const Home = () => {
-  return (
-    <>
-      <Navigation />
-      <Header />
-    </>
-  );
+  return <Header />;
 };

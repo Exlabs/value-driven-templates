@@ -10,13 +10,18 @@ import {
   NavigationLink,
 } from './navigation.styles';
 import { AppRoute } from '../../router/app-routes';
+import { useMobileMenu } from '../../hooks/use-mobile-menu/use-mobile-menu.hook';
+import { toggleMobileMenu } from '../../context/mobile-menu/mobile-menu.action-creators';
 
 export const Navigation = () => {
   const { isMobile } = useDeviceDetect();
-  const [isMobileMenuVisible, setIsMobileMenuVisible] = React.useState(false);
+  const {
+    state: { isVisible: isMobileMenuVisible },
+    dispatch,
+  } = useMobileMenu();
 
-  const onMobileMenuClick = () => {
-    setIsMobileMenuVisible(!isMobileMenuVisible);
+  const handleHamburgerClick = () => {
+    dispatch(toggleMobileMenu());
   };
 
   return (
@@ -27,7 +32,7 @@ export const Navigation = () => {
         </a>
       </Link>
       {isMobile ? (
-        <Hamburger active={isMobileMenuVisible} onClick={onMobileMenuClick} />
+        <Hamburger active={isMobileMenuVisible} onClick={handleHamburgerClick} />
       ) : (
         <ItemList>
           <NavigationItem>
