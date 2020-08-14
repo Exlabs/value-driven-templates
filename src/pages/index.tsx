@@ -2,7 +2,7 @@ import React from 'react';
 import { Home } from '../app/home/home.component';
 
 const HomePage = () => {
-  return <Home />;
+  return <Home thumbnails={[]} />;
 };
 
 export default HomePage;

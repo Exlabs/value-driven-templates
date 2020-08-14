@@ -46,3 +46,5 @@ export const Default = () => (
     ]}
   />
 );
+
+export const EmptyList = () => <ThumbnailList thumbnails={[]} />;
