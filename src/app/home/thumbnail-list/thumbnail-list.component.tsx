@@ -1,6 +1,6 @@
 import React from 'react';
 import { TemplateThumbnail } from '../template-thumbnail/template-thumbnail.component';
-import { StyledList, StyledListItem } from './thumbnail-list.styles';
+import { StyledList, StyledListItem, EmptyListInfo } from './thumbnail-list.styles';
 
 export interface TemplateThumnbail {
   title: string;
@@ -17,11 +17,15 @@ interface ThumbnailListProps {
 export const ThumbnailList = ({ thumbnails }: ThumbnailListProps) => {
   return (
     <StyledList>
-      {thumbnails.map((thumbnail, index) => (
-        <StyledListItem key={`template-thumbnail-${index}`}>
-          <TemplateThumbnail {...thumbnail} />
-        </StyledListItem>
-      ))}
+      {!thumbnails.length ? (
+        <EmptyListInfo>There is no templates yet</EmptyListInfo>
+      ) : (
+        thumbnails.map((thumbnail, index) => (
+          <StyledListItem key={`template-thumbnail-${index}`}>
+            <TemplateThumbnail {...thumbnail} />
+          </StyledListItem>
+        ))
+      )}
     </StyledList>
   );
 };

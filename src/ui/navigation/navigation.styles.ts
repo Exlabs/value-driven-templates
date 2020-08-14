@@ -19,6 +19,7 @@ export const Logo = styled.h1`
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     font-size: 18px;
+    max-width: 70%;
   }
 `;
 

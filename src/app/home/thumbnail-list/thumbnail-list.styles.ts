@@ -18,3 +18,13 @@ export const StyledListItem = styled.li`
     width: 100%;
   }
 `;
+
+export const EmptyListInfo = styled.h3`
+  font-size: 21px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.color.fontSecondary};
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    font-size: 16px;
+  }
+`;
