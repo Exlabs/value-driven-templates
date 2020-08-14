@@ -9,6 +9,7 @@ import {
   NavigationItem,
   NavigationLink,
 } from './navigation.styles';
+import { AppRoute } from '../../router/app-routes';
 
 export const Navigation = () => {
   const { isMobile } = useDeviceDetect();
@@ -20,18 +21,22 @@ export const Navigation = () => {
 
   return (
     <StyledNavigation>
-      <Logo>value driven templates</Logo>
+      <Link href={AppRoute.HOME}>
+        <a>
+          <Logo>value driven templates</Logo>
+        </a>
+      </Link>
       {isMobile ? (
         <Hamburger active={isMobileMenuVisible} onClick={onMobileMenuClick} />
       ) : (
         <ItemList>
           <NavigationItem>
-            <Link href="/about">
+            <Link href={AppRoute.ABOUT}>
               <NavigationLink>About</NavigationLink>
             </Link>
           </NavigationItem>
           <NavigationItem>
-            <Link href="/how-to-contribute">
+            <Link href={AppRoute.HOW_TO_CONTRIBUTE}>
               <NavigationLink>How to contribute</NavigationLink>
             </Link>
           </NavigationItem>
