@@ -10,7 +10,7 @@ export const HeaderContainer = styled(motion.header)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 35px);
   position: relative;
   opacity: 0;
   animation: showHeader 1s forwards;
@@ -31,10 +31,6 @@ export const HeaderContainer = styled(motion.header)`
   h2 {
     max-width: 80%;
     font-size: 60px;
-
-    @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.tablet}) {
-      font-size: 31px;
-    }
 
     @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
       max-width: 100%;
