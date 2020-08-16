@@ -9,9 +9,10 @@ import { MobileMenu } from '../ui/mobile-menu/mobile-menu.component';
 const AppContainer = styled.div`
   max-width: 1620px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 20px 40px;
   min-height: 100vh;
   background-color: ${({ theme }) => theme.color.background};
+  -webkit-overflow-scrolling: touch;
 `;
 
 export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
@@ -27,23 +28,27 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
     <AppContainer>
       <style jsx global>
         {`
+          html,
           body {
-            ${isMobileMenuVisible && 'overflow: hidden;'}
+            -webkit-overflow-scrolling: touch;
+            margin: 0;
+            padding: 0;
           }
         `}
       </style>
       {isStickyNavigation && (
         <div
           style={{
-            height: '35px',
+            height: '54px',
           }}
-        ></div>
+        />
       )}
       <div
         ref={stickyRef}
         style={{
-          position: isStickyNavigation ? 'sticky' : 'initial',
-          top: '0',
+          ...(isStickyNavigation && { position: 'fixed' }),
+          ...(isStickyNavigation && { width: 'calc(100% - 40px)' }),
+          top: 0,
           zIndex: 9999,
           ...(isStickyNavigation && { padding: '10px 0' }),
           background: theme.color.background,
