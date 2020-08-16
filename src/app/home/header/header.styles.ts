@@ -15,6 +15,11 @@ export const HeaderContainer = styled(motion.header)`
   opacity: 0;
   animation: showHeader 1s forwards;
 
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    margin: 70px 0;
+    height: auto;
+  }
+
   p {
     color: ${({ theme }) => theme.color.fontSecondary};
     font-size: 23px;
@@ -46,14 +51,14 @@ export const HeaderContainer = styled(motion.header)`
     opacity: 0;
 
     @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 `;
 
 export const PoweredByText = styled.h3`
   font-size: 40px;
-  opacity: 0.5;
+  opacity: 0.6;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -63,13 +68,13 @@ export const PoweredByText = styled.h3`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    font-size: 16px;
+    font-size: 14px;
     position: initial;
     margin-top: 60px;
     opacity: 0;
 
     animation: showText 1s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.3s;
   }
 `;
 

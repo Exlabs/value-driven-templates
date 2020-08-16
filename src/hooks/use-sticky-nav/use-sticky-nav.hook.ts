@@ -20,6 +20,7 @@ export const useStickyNav = ({
     initialDirection
   );
   const [isSticky, setSticky] = React.useState(false);
+  const [bottomReached, setBottomReached] = React.useState(false);
 
   React.useEffect(() => {
     const threshold = thresholdPixels ?? 0;
@@ -53,6 +54,22 @@ export const useStickyNav = ({
         window.requestAnimationFrame(updateScrollDirection);
         ticking = true;
       }
+
+      const windowHeight =
+        'innerHeight' in window
+          ? window.innerHeight
+          : document.documentElement.offsetHeight;
+      const body = document.body;
+      const html = document.documentElement;
+      const docHeight = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight,
+        html.scrollHeight,
+        html.offsetHeight
+      );
+      const windowBottom = windowHeight + window.pageYOffset;
+      setBottomReached(windowBottom >= docHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -62,5 +79,5 @@ export const useStickyNav = ({
     };
   }, [initialDirection, thresholdPixels, stickyRef]);
 
-  return scrollDirection === ScrollDirection.UP && isSticky;
+  return !bottomReached && scrollDirection === ScrollDirection.UP && isSticky;
 };
