@@ -10,12 +10,24 @@ export const StyledNavigation = styled.nav`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.color.fontPrimary};
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const LogoImage = styled.img`
+  width: 30px;
+  margin-right: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    width: 35px;
   }
 `;
 
 export const Logo = styled.h1`
   font-weight: 700;
-  font-size: 21px;
+  font-size: 23px;
+  color: ${({ theme }) => theme.color.fontPrimary};
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     font-size: 18px;
@@ -37,7 +49,8 @@ export const NavigationItem = styled.li`
 `;
 
 export const NavigationLink = styled.a`
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 500;
   cursor: pointer;
+  color: ${({ theme }) => theme.color.fontPrimary};
 `;

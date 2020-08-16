@@ -14,7 +14,7 @@ export const Home = ({ thumbnails }: HomeProps) => {
   return (
     <>
       <Header />
-      <LatestHeader>
+      <LatestHeader id="resources">
         The <span>latest</span>
       </LatestHeader>
       <ThumbnailList thumbnails={thumbnails} />

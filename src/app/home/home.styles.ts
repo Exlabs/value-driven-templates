@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const LatestHeader = styled.h2`
+  color: ${({ theme }) => theme.color.fontPrimary};
   font-weight: 700;
   font-size: 50px;
   margin: 70px 0 30px;
