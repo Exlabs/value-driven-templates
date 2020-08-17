@@ -8,6 +8,7 @@ import {
   ItemList,
   NavigationItem,
   NavigationLink,
+  LogoImage,
 } from './navigation.styles';
 import { AppRoute } from '../../router/app-routes';
 import { useMobileMenu } from '../../hooks/use-mobile-menu/use-mobile-menu.hook';
@@ -28,6 +29,7 @@ export const Navigation = () => {
     <StyledNavigation>
       <Link href={AppRoute.HOME}>
         <a>
+          <LogoImage src={`${process.env.ASSET_PREFIX}/icons/logo.svg`} />
           <Logo>value driven templates</Logo>
         </a>
       </Link>

@@ -30,4 +30,5 @@ export const StyledLink = styled.a`
   cursor: pointer;
   font-weight: 500;
   font-size: 21px;
+  color: ${({ theme }) => theme.color.fontPrimary};
 `;

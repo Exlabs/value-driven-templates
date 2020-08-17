@@ -9,7 +9,7 @@ import { MobileMenu } from '../ui/mobile-menu/mobile-menu.component';
 const AppContainer = styled.div`
   max-width: 1620px;
   margin: 0 auto;
-  padding: 10px 20px 40px;
+  padding: 10px 20px;
   min-height: 100vh;
   background-color: ${({ theme }) => theme.color.background};
   -webkit-overflow-scrolling: touch;
@@ -47,7 +47,8 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
         ref={stickyRef}
         style={{
           ...(isStickyNavigation && { position: 'fixed' }),
-          ...(isStickyNavigation && { width: 'calc(100% - 40px)' }),
+          ...(isStickyNavigation && { width: '100%' }),
+          maxWidth: '1580px',
           top: 0,
           zIndex: 9999,
           ...(isStickyNavigation && { padding: '10px 0' }),
