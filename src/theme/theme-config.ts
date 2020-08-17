@@ -11,6 +11,7 @@ export type Color =
   | 'white'
   | 'gray'
   | 'gray400'
+  | 'gray300'
   | 'lightGray'
   | 'primary400';
 
@@ -38,6 +39,7 @@ export const theme: Theme = {
     fontSecondary: '#5F6C7B',
     white: '#FFFFFF',
     gray: '#72757E',
+    gray300: 'rgb(114, 117, 126, 0.3)',
     gray400: 'rgba(114, 117, 126, 0.4)',
     lightGray: '#E8E8E8',
   },
