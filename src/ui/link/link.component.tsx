@@ -9,7 +9,7 @@ const StyledLink = styled.a`
 `;
 
 const StyledButtonLink = styled.a`
-  background-color: inherit;
+  background-color: ${({ theme }) => theme.color.white};
   border: 2px solid ${({ theme }) => theme.color.primary};
   padding: 10px 30px;
   border-radius: 6px;
@@ -46,22 +46,32 @@ export const Link = ({
     switch (type) {
       default:
       case 'default':
-        return <StyledLink>{children}</StyledLink>;
+        return (
+          <StyledLink href={href} {...linkProps}>
+            {children}
+          </StyledLink>
+        );
 
       case 'button':
-        return <StyledButtonLink>{children}</StyledButtonLink>;
+        return (
+          <StyledButtonLink href={href} {...linkProps}>
+            {children}
+          </StyledButtonLink>
+        );
 
       case 'primaryButton':
-        return <StyledPrimaryButtonLink>{children}</StyledPrimaryButtonLink>;
+        return (
+          <StyledPrimaryButtonLink href={href} {...linkProps}>
+            {children}
+          </StyledPrimaryButtonLink>
+        );
     }
   };
 
   return (
     <>
       {external ? (
-        <StyledLink href={href} {...linkProps}>
-          {linkType(children)}
-        </StyledLink>
+        linkType(children)
       ) : (
         <NextLink href={href}>
           <StyledLink>{linkType(children)}</StyledLink>

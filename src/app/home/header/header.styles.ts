@@ -53,6 +53,7 @@ export const HeaderContainer = styled(motion.header)`
     color: ${({ theme }) => theme.color.white};
     font-weight: 500;
     padding: 10px 30px;
+    text-decoration: none;
 
     &:hover {
       color: #00000d;
