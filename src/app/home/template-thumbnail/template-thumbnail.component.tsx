@@ -10,6 +10,7 @@ import {
   TemplateDescription,
   TagsContainer,
 } from './template-thumbnail.styles';
+import { getInternalLink } from '../../../router/app-routes';
 
 interface TemplateThumbnailProps {
   title: string;
@@ -27,7 +28,7 @@ export const TemplateThumbnail = ({
   tags,
 }: TemplateThumbnailProps) => {
   return (
-    <Link href={templateUrl}>
+    <Link href={getInternalLink(`templates/${templateUrl}`)}>
       <StyledLink className="template-thumbnail">
         <Template
           whileHover={{

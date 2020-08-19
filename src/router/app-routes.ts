@@ -1,7 +1,9 @@
 export enum AppRoute {
   HOME = '',
-  ABOUT = '/about',
-  HOW_TO_CONTRIBUTE = '/how-to-contribute',
+  ABOUT = 'about',
+  HOW_TO_CONTRIBUTE = 'how-to-contribute',
+  TEMPLATE = 'templates',
 }
 
-export const getLink = (route: AppRoute) => `${process.env.ASSET_PREFIX}/${route}`;
+export const getInternalLink = (route: AppRoute | string) =>
+  `${process.env.ASSET_PREFIX}/${route}`;

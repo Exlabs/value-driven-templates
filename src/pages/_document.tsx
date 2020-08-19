@@ -37,6 +37,7 @@ export default class MyDocument extends Document {
             name="description"
             content="Collection of tools and frameworks in template form to help your team solve problems, make decisions, and successfully finish projects."
           />
+          <link rel="icon" href={`${process.env.ASSET_PREFIX}/favicon-32x32.png`}></link>
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Raleway:400,500,700&display=swap"
             rel="stylesheet"

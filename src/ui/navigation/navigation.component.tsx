@@ -10,7 +10,7 @@ import {
   NavigationLink,
   LogoImage,
 } from './navigation.styles';
-import { AppRoute } from '../../router/app-routes';
+import { AppRoute, getInternalLink } from '../../router/app-routes';
 import { useMobileMenu } from '../../hooks/use-mobile-menu/use-mobile-menu.hook';
 import { toggleMobileMenu } from '../../context/mobile-menu/mobile-menu.action-creators';
 
@@ -27,7 +27,7 @@ export const Navigation = () => {
 
   return (
     <StyledNavigation>
-      <Link href={AppRoute.HOME}>
+      <Link href={getInternalLink(AppRoute.HOME)}>
         <a>
           <LogoImage src={`${process.env.ASSET_PREFIX}/icons/logo.svg`} />
           <Logo>value driven templates</Logo>
@@ -38,12 +38,12 @@ export const Navigation = () => {
       ) : (
         <ItemList>
           <NavigationItem>
-            <Link href={AppRoute.ABOUT}>
+            <Link href={getInternalLink(AppRoute.ABOUT)}>
               <NavigationLink>About</NavigationLink>
             </Link>
           </NavigationItem>
           <NavigationItem>
-            <Link href={AppRoute.HOW_TO_CONTRIBUTE}>
+            <Link href={getInternalLink(AppRoute.HOW_TO_CONTRIBUTE)}>
               <NavigationLink>How to contribute</NavigationLink>
             </Link>
           </NavigationItem>
