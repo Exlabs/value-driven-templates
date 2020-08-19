@@ -1,0 +1,9 @@
+[
+  {
+    "id": "adr",
+    "title": "Architecture Decision Record",
+    "description": "Learn how to document important architectural decisions in your development team.",
+    "icon": "adr",
+    "tags": ["#Architecture", "#Team Work"]
+  }
+]

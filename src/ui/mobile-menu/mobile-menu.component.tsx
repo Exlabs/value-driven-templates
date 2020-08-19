@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AppRoute } from '../../router/app-routes';
+import { AppRoute, getInternalLink } from '../../router/app-routes';
 import { Navigation } from '../navigation/navigation.component';
 import { StyledNav, StyledList, StyledListItem, StyledLink } from './mobile-menu.styles';
 
@@ -10,17 +10,17 @@ export const MobileMenu = () => {
       <Navigation />
       <StyledList>
         <StyledListItem>
-          <Link href={AppRoute.HOME}>
+          <Link href={getInternalLink(AppRoute.HOME)}>
             <StyledLink>HOME</StyledLink>
           </Link>
         </StyledListItem>
         <StyledListItem>
-          <Link href={AppRoute.ABOUT}>
+          <Link href={getInternalLink(AppRoute.ABOUT)}>
             <StyledLink>ABOUT</StyledLink>
           </Link>
         </StyledListItem>
         <StyledListItem>
-          <Link href={AppRoute.HOW_TO_CONTRIBUTE}>
+          <Link href={getInternalLink(AppRoute.HOW_TO_CONTRIBUTE)}>
             <StyledLink>HOW TO CONTRIBUTE</StyledLink>
           </Link>
         </StyledListItem>
