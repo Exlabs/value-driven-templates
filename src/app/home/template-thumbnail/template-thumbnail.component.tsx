@@ -42,7 +42,9 @@ export const TemplateThumbnail = ({
           }}
         >
           <TemplateHeader>
-            <TemplateImage src={`${process.env.ASSET_PREFIX}/icons/${icon}.svg`} />
+            <TemplateImage
+              src={`${process.env.ASSET_PREFIX}/icons/templates/${icon}.svg`}
+            />
             <TemplateTitle>{title}</TemplateTitle>
           </TemplateHeader>
           {tags.length && (
