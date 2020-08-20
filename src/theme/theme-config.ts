@@ -9,11 +9,13 @@ export type Color =
   | 'fontPrimary'
   | 'fontSecondary'
   | 'white'
+  | 'white100'
   | 'gray'
   | 'gray400'
   | 'gray300'
   | 'lightGray'
-  | 'primary400';
+  | 'primary400'
+  | 'fontPrimary100';
 
 export interface Theme {
   fontFamily: { [key in FontFamily]: string };
@@ -36,8 +38,10 @@ export const theme: Theme = {
     secondary: '#2CB67D',
     background: '#FFFFFE',
     fontPrimary: '#094067',
+    fontPrimary100: 'rgba(9, 64, 103, 0.1)',
     fontSecondary: '#5F6C7B',
     white: '#FFFFFF',
+    white100: 'rgba(255, 255, 255, 0.1)',
     gray: '#72757E',
     gray300: 'rgb(114, 117, 126, 0.3)',
     gray400: 'rgba(114, 117, 126, 0.4)',

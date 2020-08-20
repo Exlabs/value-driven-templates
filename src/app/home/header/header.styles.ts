@@ -10,7 +10,7 @@ export const HeaderContainer = styled(motion.header)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 35px);
+  height: calc(100vh - 84px);
   position: relative;
   opacity: 0;
   animation: showHeader 1s forwards;
