@@ -7,13 +7,10 @@ import { useStickyNav } from '../hooks/use-sticky-nav/use-sticky-nav.hook';
 import { MobileMenu } from '../ui/mobile-menu/mobile-menu.component';
 import { Footer } from '../ui/footer/footer.component';
 
-const AppContainer = styled.div`
+export const AppContainer = styled.div`
   max-width: 1620px;
   margin: 0 auto;
   padding: 10px 20px;
-  min-height: 100vh;
-  background-color: ${({ theme }) => theme.color.background};
-  -webkit-overflow-scrolling: touch;
 
   & .footer {
     margin-top: 30px;
@@ -30,7 +27,7 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   } = useMobileMenu();
 
   return (
-    <AppContainer>
+    <>
       <style jsx global>
         {`
           html,
@@ -38,6 +35,7 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
             -webkit-overflow-scrolling: touch;
             margin: 0;
             padding: 0;
+            background-color: ${({ theme }) => theme.color.background};
           }
         `}
       </style>
@@ -48,23 +46,33 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
           }}
         />
       )}
+
       <div
         ref={stickyRef}
         style={{
           ...(isStickyNavigation && { position: 'fixed' }),
-          ...(isStickyNavigation && { width: 'calc(100% - 40px)' }),
-          maxWidth: '1580px',
+          ...(isStickyNavigation && { width: '100%' }),
+          ...(!isStickyNavigation && { padding: '20px 20px' }),
           top: 0,
           zIndex: 9999,
           ...(isStickyNavigation && { padding: '10px 0' }),
           background: theme.color.background,
         }}
       >
-        <Navigation />
+        {isStickyNavigation ? (
+          <AppContainer>
+            <Navigation />
+          </AppContainer>
+        ) : (
+          <Navigation />
+        )}
       </div>
+
       {children}
       {isMobileMenuVisible && <MobileMenu />}
-      <Footer />
-    </AppContainer>
+      <AppContainer>
+        <Footer />
+      </AppContainer>
+    </>
   );
 };

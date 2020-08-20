@@ -26,7 +26,7 @@ export const Navigation = () => {
   };
 
   return (
-    <StyledNavigation>
+    <StyledNavigation className="navigation">
       <Link href={getInternalLink(AppRoute.HOME)}>
         <a>
           <LogoImage src={`${process.env.ASSET_PREFIX}/icons/logo.svg`} />

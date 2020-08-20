@@ -9,6 +9,10 @@ export const StyledNav = styled.nav`
   width: 100%;
   padding: 10px 20px;
   z-index: 9999;
+
+  & > .navigation {
+    padding-top: 10px;
+  }
 `;
 
 export const StyledList = styled.ul`
