@@ -10,7 +10,7 @@ export const SpecialSection = () => {
     <div style={{ position: 'relative' }}>
       <SectionContainer>
         <AppContainer>
-          <NumberedText number="02">
+          <NumberedText number="02" rightPosition={isMobile}>
             <p className="exlabs-believe">
               At Exlabs, we believe that the true alignment between management and
               engineers can only be achieved by helping both sides speak the same

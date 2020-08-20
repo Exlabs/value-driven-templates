@@ -1,13 +1,27 @@
-#  (2020-08-13)
+#  (2020-08-20)
 
 
 ### Features
 
+- About description component ([4a45235](https://github.com/Exlabs/value-driven-templates/commit/4a45235f3c3411154403c5f1291df0d4a1fba25a))
+- Footer component ([b10f707](https://github.com/Exlabs/value-driven-templates/commit/b10f707e635e773ee90fbb0a938abac715fc23e5))
+- Header about component ([fba1867](https://github.com/Exlabs/value-driven-templates/commit/fba18675d68e81e4e6a3e56131c13976435407f6))
 - Header component ([1d4c357](https://github.com/Exlabs/value-driven-templates/commit/1d4c3570202c8eef6bf1b93c251d6d8395abf106))
+- Mobile menu component ([a3eb900](https://github.com/Exlabs/value-driven-templates/commit/a3eb900d67a5ffbb29f759b0e6d20fcaad38cadd))
 - Navigation component ([498e4b9](https://github.com/Exlabs/value-driven-templates/commit/498e4b977be4cd96f56898b99094c4b90f32495c))
 - Tag component ([5c874db](https://github.com/Exlabs/value-driven-templates/commit/5c874db1a12da5f625ed77f82f4b9cb52cf112bb))
 - Template thumbnail component ([71a8f6c](https://github.com/Exlabs/value-driven-templates/commit/71a8f6cb04e88e406214bd038f6e4c4ae54e9f39))
 - Theme provider ([ccf1fbd](https://github.com/Exlabs/value-driven-templates/commit/ccf1fbd240a6c9dd7e237d13d19794a71e930b21))
+- Thumbnail list component ([98906aa](https://github.com/Exlabs/value-driven-templates/commit/98906aa92c481e59c38e11a9eb7f7304b7e17f35))
+
+
+### Refactoring & Improvements
+
+- Added logo to navigation ([3791328](https://github.com/Exlabs/value-driven-templates/commit/37913282b9f0c94ec09ee7e5e1ad0bf0bf997865))
+- Align improvements ([044d4c1](https://github.com/Exlabs/value-driven-templates/commit/044d4c1552885c2aa5c878164d8b8c16fc915d8a))
+- Deployment improvement. Added static files prefix. ([653750b](https://github.com/Exlabs/value-driven-templates/commit/653750b2629faa9adbffb5e0557a18f3ad409258))
+- Empty thumbnail list improvement ([2148cb3](https://github.com/Exlabs/value-driven-templates/commit/2148cb37f7b1c79065779ffa990a7402b0d93227))
+- Fixed sticky nav jumping on mobile ([f0d3f87](https://github.com/Exlabs/value-driven-templates/commit/f0d3f87e6cd8704b03de76a276cd0fd237c95f78))
 
 
 ### Documentation
@@ -18,5 +32,5 @@
 ### Miscellaneous
 
 - Project init ([04208ec](https://github.com/Exlabs/value-driven-templates/commit/04208ec6c8d93cf27dd90b089e6ac5c784e3db96))
-- Deployment bootstrap ([6b40e51](https://github.com/Exlabs/value-driven-templates/commit/6b40e51dc284e2c72afb0ff4811623bf0fe35985))
+- Deployment bootstrap ([a39e2fe](https://github.com/Exlabs/value-driven-templates/commit/a39e2fed4d0e4d4d48cfbc0fb6f18e3e86730218))
 

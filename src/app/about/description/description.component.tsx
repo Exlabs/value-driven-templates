@@ -48,7 +48,7 @@ export const Description = () => {
           </NumberedText>
         </ThirdSection>
         <FourthSection>
-          <NumberedText number="04">
+          <NumberedText number="04" rightPosition={false}>
             “We believe the knowledge we share here will help IT groups improve their
             planning, delivery and maintenance processes, which would result in delivering
             software assets better suited for unique business needs.”
