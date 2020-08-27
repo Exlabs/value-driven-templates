@@ -1,4 +1,5 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Highlight } from '../../../ui/highlight/highlight.component';
 import { Link } from '../../../ui/link/link.component';
 import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
@@ -34,8 +35,8 @@ export const Header = () => {
         <StyledDescription>
           Want to share your <span>knowledge</span>? You can learn here how.
         </StyledDescription>
-        <Link href="" type="button">
-          I'm ready to share my knowledge!
+        <Link href="#share" type="button">
+          <AnchorLink href="#share">I'm ready to share my knowledge!</AnchorLink>
         </Link>
       </TextContainer>
     </StyledHeader>
