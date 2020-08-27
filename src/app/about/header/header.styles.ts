@@ -24,13 +24,21 @@ export const TextSection = styled.section`
     padding: 20px 40px;
     width: fit-content;
     display: inline-block;
-    color: ${({ theme }) => theme.color.primary};
     font-size: 17px;
+  }
+
+  & a {
+    color: ${({ theme }) => theme.color.primary};
   }
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     max-width: 100%;
     align-items: center;
+
+    & a {
+      padding: 15px;
+      font-size: 14px;
+    }
   }
 `;
 

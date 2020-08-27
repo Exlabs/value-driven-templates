@@ -4,9 +4,12 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: calc(100vh - 85px);
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     flex-direction: column;
+    height: auto;
+    margin-bottom: 60px;
   }
 `;
 
@@ -29,8 +32,12 @@ export const TextContainer = styled.section`
     display: block;
     margin-top: 30px;
     width: fit-content;
-    padding: 20px 25px;
+  }
+
+  & a {
     color: ${({ theme }) => theme.color.primary};
+    font-size: 17px;
+    padding: 15px 20px;
   }
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
@@ -39,7 +46,8 @@ export const TextContainer = styled.section`
 
     & > a {
       text-align: center;
-      padding: 10px 20px;
+      padding: 15px;
+      font-size: 14px;
     }
   }
 `;

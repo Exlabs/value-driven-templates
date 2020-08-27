@@ -15,7 +15,8 @@ export const StepTitle = styled.h3`
   border-bottom: 1px solid ${({ theme }) => theme.color.gray300};
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    font-size: 27px;
+    font-size: 21px;
+    text-align: center;
   }
 `;
 

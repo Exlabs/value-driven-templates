@@ -60,9 +60,9 @@ export const HeaderContainer = styled(motion.header)`
     }
 
     @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
-      padding: 10px 15px;
+      padding: 15px;
     }
   }
 `;
