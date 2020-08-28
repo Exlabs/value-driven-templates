@@ -50,12 +50,12 @@ export const FirstSection = styled(StyledSection)`
   margin-top: 30px;
 
   @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    border-bottom: 3px solid ${({ theme }) => theme.color.primary400};
+    border-bottom: 3px solid ${({ theme }) => theme.color.gray400};
 
     & > .numbered-point {
       position: absolute;
-      left: -50px;
-      top: calc(50% - 50px);
+      left: -40px;
+      top: calc(50% - 40px);
       z-index: 10;
     }
 
@@ -66,7 +66,7 @@ export const FirstSection = styled(StyledSection)`
       height: 50%;
       bottom: 0;
       left: 0;
-      background-color: ${({ theme }) => theme.color.primary400};
+      background-color: ${({ theme }) => theme.color.gray400};
     }
   }
 `;
@@ -80,12 +80,12 @@ export const SecondSection = styled(StyledSection)`
 
   @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     padding: 60px 80px 60px 0;
-    border-right: 3px solid ${({ theme }) => theme.color.primary400};
+    border-right: 3px solid ${({ theme }) => theme.color.gray400};
 
     & > .numbered-point {
       position: absolute;
-      right: -50px;
-      top: calc(50% - 50px);
+      right: -40px;
+      top: calc(50% - 40px);
       z-index: 10;
     }
   }
@@ -93,12 +93,12 @@ export const SecondSection = styled(StyledSection)`
 
 export const ThirdSection = styled(StyledSection)`
   @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    border-top: 3px solid ${({ theme }) => theme.color.primary400};
+    border-top: 3px solid ${({ theme }) => theme.color.gray400};
 
     & > .numbered-point {
       position: absolute;
-      left: -50px;
-      top: calc(50% - 50px);
+      left: -40px;
+      top: calc(50% - 40px);
       z-index: 10;
     }
 
@@ -109,7 +109,7 @@ export const ThirdSection = styled(StyledSection)`
       height: 50%;
       top: 0;
       left: 0;
-      background-color: ${({ theme }) => theme.color.primary400};
+      background-color: ${({ theme }) => theme.color.gray400};
     }
   }
 `;
