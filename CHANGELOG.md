@@ -13,6 +13,7 @@
 - Mobile menu component ([a3eb900](https://github.com/Exlabs/value-driven-templates/commit/a3eb900d67a5ffbb29f759b0e6d20fcaad38cadd))
 - Navigation component ([498e4b9](https://github.com/Exlabs/value-driven-templates/commit/498e4b977be4cd96f56898b99094c4b90f32495c))
 - Tag component ([5c874db](https://github.com/Exlabs/value-driven-templates/commit/5c874db1a12da5f625ed77f82f4b9cb52cf112bb))
+- Template page ([d056f16](https://github.com/Exlabs/value-driven-templates/commit/d056f161a23241f76a4b5a51a390d18e0d04f24e))
 - Template thumbnail component ([71a8f6c](https://github.com/Exlabs/value-driven-templates/commit/71a8f6cb04e88e406214bd038f6e4c4ae54e9f39))
 - Theme provider ([ccf1fbd](https://github.com/Exlabs/value-driven-templates/commit/ccf1fbd240a6c9dd7e237d13d19794a71e930b21))
 - Thumbnail list component ([98906aa](https://github.com/Exlabs/value-driven-templates/commit/98906aa92c481e59c38e11a9eb7f7304b7e17f35))
@@ -29,7 +30,7 @@
 
 ### UI Updates
 
-- Styles improvements ([da297bb](https://github.com/Exlabs/value-driven-templates/commit/da297bb10cbdb2a7f50217c959022d47e08de237))
+- Styles improvements ([a65c18a](https://github.com/Exlabs/value-driven-templates/commit/a65c18ac9981051f4c6b4adfcd6f413fe10fa581))
 
 
 ### Documentation

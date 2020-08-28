@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+export const ProvideText = styled(motion.p)`
+  color: ${({ theme }) => theme.color.fontSecondary};
+  font-size: 23px;
+  margin-bottom: 25px;
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+`;
+
 export const HeaderContainer = styled(motion.header)`
   font-size: 60px;
   text-align: center;
@@ -12,25 +23,10 @@ export const HeaderContainer = styled(motion.header)`
   width: 100%;
   height: calc(100vh - 84px);
   position: relative;
-  opacity: 0;
-  animation: showHeader 1s forwards;
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     margin: 70px 0;
     height: auto;
-  }
-
-  p {
-    color: ${({ theme }) => theme.color.fontSecondary};
-    font-size: 23px;
-    margin-bottom: 25px;
-    animation: moveDown 1s forwards;
-    opacity: 0;
-
-    @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
   }
 
   h2 {
@@ -47,9 +43,6 @@ export const HeaderContainer = styled(motion.header)`
   a {
     font-size: 23px;
     margin-top: 50px;
-    animation: moveUp 0.5s forwards;
-    animation-delay: 1s;
-    opacity: 0;
     color: ${({ theme }) => theme.color.white};
     font-weight: 500;
     padding: 10px 30px;

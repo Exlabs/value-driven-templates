@@ -1,4 +1,4 @@
-# This is a test template [WIP]
+# This is a test template
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim lacus, dictum in mauris a, rhoncus luctus lacus. Duis id sapien tristique lacus auctor faucibus non ac est. Donec a nisl tortor. Sed porta semper felis, non eleifend nibh viverra ac. Duis sed elit odio. Proin sodales lectus arcu, a faucibus justo iaculis vitae. Duis efficitur consequat ex ac posuere. Quisque ultrices eget ante ut suscipit. Fusce ac magna et purus eleifend mollis. Mauris ornare euismod nulla, sed posuere nisl convallis sed. Mauris iaculis felis turpis, at aliquam arcu sodales a. Integer tortor neque, volutpat vel neque a, malesuada consequat est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eget gravida ipsum. Nulla facilisi. Donec maximus augue id erat interdum consequat.
 

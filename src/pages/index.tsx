@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 const HomeContainer = styled.div`
   position: relative;
+  overflow: hidden;
 `;
 
 const BackgroundImage = styled.img`
