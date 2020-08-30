@@ -1,5 +1,7 @@
 const withSass = require('@zeit/next-sass');
 const withLess = require('@zeit/next-less');
+const withReactSvg = require('next-react-svg');
+const path = require('path');
 
 const webpack = require('webpack');
 
@@ -11,20 +13,23 @@ if (typeof require !== 'undefined') {
   require.extensions['.less'] = () => {};
 }
 
-module.exports = withLess(
-  withSass({
-    assetPrefix,
-    lessLoaderOptions: {
-      javascriptEnabled: true,
-    },
-    webpack: (config) => {
-      config.plugins.push(
-        new webpack.DefinePlugin({
-          'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
-        })
-      );
+module.exports = withReactSvg(
+  withLess(
+    withSass({
+      assetPrefix,
+      lessLoaderOptions: {
+        javascriptEnabled: true,
+      },
+      webpack: (config) => {
+        config.plugins.push(
+          new webpack.DefinePlugin({
+            'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
+          })
+        );
 
-      return config;
-    },
-  })
+        return config;
+      },
+      include: path.resolve(__dirname, 'public/icons'),
+    })
+  )
 );

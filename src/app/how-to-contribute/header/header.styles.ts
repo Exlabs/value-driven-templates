@@ -4,12 +4,13 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100vh - 85px);
+  margin: 60px 0;
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
     flex-direction: column;
     height: auto;
     margin-bottom: 60px;
+    margin-top: 0;
   }
 `;
 

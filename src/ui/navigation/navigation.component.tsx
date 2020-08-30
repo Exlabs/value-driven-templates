@@ -27,7 +27,7 @@ export const Navigation = () => {
 
   return (
     <StyledNavigation className="navigation">
-      <Link href={getInternalLink(AppRoute.HOME)}>
+      <Link prefetch href={getInternalLink(AppRoute.HOME)}>
         <a>
           <LogoImage src={`${process.env.ASSET_PREFIX}/icons/logo.svg`} />
           <Logo>value driven templates</Logo>
