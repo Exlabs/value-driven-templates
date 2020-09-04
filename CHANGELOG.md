@@ -1,4 +1,4 @@
-#  (2020-08-28)
+#  (2020-09-04)
 
 
 ### Features
@@ -13,7 +13,7 @@
 - Mobile menu component ([a3eb900](https://github.com/Exlabs/value-driven-templates/commit/a3eb900d67a5ffbb29f759b0e6d20fcaad38cadd))
 - Navigation component ([498e4b9](https://github.com/Exlabs/value-driven-templates/commit/498e4b977be4cd96f56898b99094c4b90f32495c))
 - Tag component ([5c874db](https://github.com/Exlabs/value-driven-templates/commit/5c874db1a12da5f625ed77f82f4b9cb52cf112bb))
-- Template page ([d056f16](https://github.com/Exlabs/value-driven-templates/commit/d056f161a23241f76a4b5a51a390d18e0d04f24e))
+- Template page ([07da83f](https://github.com/Exlabs/value-driven-templates/commit/07da83fc4ab2953064c15a41113627662a6f87e2))
 - Template thumbnail component ([71a8f6c](https://github.com/Exlabs/value-driven-templates/commit/71a8f6cb04e88e406214bd038f6e4c4ae54e9f39))
 - Theme provider ([ccf1fbd](https://github.com/Exlabs/value-driven-templates/commit/ccf1fbd240a6c9dd7e237d13d19794a71e930b21))
 - Thumbnail list component ([98906aa](https://github.com/Exlabs/value-driven-templates/commit/98906aa92c481e59c38e11a9eb7f7304b7e17f35))
@@ -26,6 +26,7 @@
 - Deployment improvement. Added static files prefix. ([653750b](https://github.com/Exlabs/value-driven-templates/commit/653750b2629faa9adbffb5e0557a18f3ad409258))
 - Empty thumbnail list improvement ([2148cb3](https://github.com/Exlabs/value-driven-templates/commit/2148cb37f7b1c79065779ffa990a7402b0d93227))
 - Fixed sticky nav jumping on mobile ([f0d3f87](https://github.com/Exlabs/value-driven-templates/commit/f0d3f87e6cd8704b03de76a276cd0fd237c95f78))
+- Improved contribution page ([d91134c](https://github.com/Exlabs/value-driven-templates/commit/d91134c24748f172fe65873c449c93749d0e0861))
 
 
 ### UI Updates

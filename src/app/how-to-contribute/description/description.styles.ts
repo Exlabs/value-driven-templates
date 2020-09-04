@@ -1,29 +1,7 @@
 import styled from 'styled-components';
 
-const StyledSection = styled.section`
-  display: flex;
-  position: relative;
-
-  @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    padding: 60px 0 60px 80px;
-    & > .contribute-step {
-      width: 80%;
-    }
-  }
-
-  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    display: flex;
-    flex-direction: column;
-
-    & > .titled-step {
-      margin-bottom: 20px;
-    }
-  }
-`;
-
 export const DescriptionContainer = styled.article`
   margin-top: 50px;
-  max-width: 90%;
   margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
@@ -46,70 +24,79 @@ export const DescriptionTitle = styled.h2`
   }
 `;
 
-export const FirstSection = styled(StyledSection)`
-  margin-top: 30px;
-
-  @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    border-bottom: 3px solid ${({ theme }) => theme.color.gray400};
-
-    & > .numbered-point {
-      position: absolute;
-      left: -40px;
-      top: calc(50% - 40px);
-      z-index: 10;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 3px;
-      height: 50%;
-      bottom: 0;
-      left: 0;
-      background-color: ${({ theme }) => theme.color.gray400};
-    }
-  }
-`;
-
-export const SecondSection = styled(StyledSection)`
-  justify-content: flex-end;
+export const Section = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
 
   @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    margin: 30px 0;
-  }
-
-  @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    padding: 60px 80px 60px 0;
-    border-right: 3px solid ${({ theme }) => theme.color.gray400};
-
-    & > .numbered-point {
-      position: absolute;
-      right: -40px;
-      top: calc(50% - 40px);
-      z-index: 10;
-    }
+    flex-direction: column-reverse;
   }
 `;
 
-export const ThirdSection = styled(StyledSection)`
-  @media screen and (min-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
-    border-top: 3px solid ${({ theme }) => theme.color.gray400};
+export const SectionTitle = styled.h3`
+  font-size: 33px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.color.fontPrimary};
 
-    & > .numbered-point {
-      position: absolute;
-      left: -40px;
-      top: calc(50% - 40px);
-      z-index: 10;
-    }
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    font-size: 21px;
+  }
+`;
 
-    &::after {
-      content: '';
-      position: absolute;
-      width: 3px;
-      height: 50%;
-      top: 0;
-      left: 0;
-      background-color: ${({ theme }) => theme.color.gray400};
-    }
+export const SectionText = styled.p`
+  font-size: 21px;
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    font-size: 17px;
+  }
+`;
+
+export const SectionTextContainer = styled.div`
+  width: 55%;
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    width: 100%;
+    margin: 20px 0;
+  }
+`;
+
+export const SectionImageContainer = styled.div.attrs(
+  ({ backgroundImage }: { backgroundImage: string }) => ({ backgroundImage })
+)`
+  width: 40%;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    z-index: 0;
+    background: ${({ backgroundImage }) =>
+      `url('${process.env.ASSET_PREFIX}/icons/hero-pattern/${backgroundImage}.svg')`};
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    width: 100%;
+  }
+`;
+
+export const SectionImage = styled.img`
+  width: 80%;
+  z-index: 1;
+
+  @media screen and (max-width: ${({ theme }) => theme.deviceBreakpoint.mobile}) {
+    width: 100%;
   }
 `;
