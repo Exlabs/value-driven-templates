@@ -2,7 +2,8 @@ export enum AppRoute {
   HOME = '',
   ABOUT = 'about',
   HOW_TO_CONTRIBUTE = 'how-to-contribute',
-  TEMPLATE = 'templates',
+  TEMPLATES = 'templates',
+  TEMPLATE = 'template',
 }
 
 export const getInternalLink = (route: AppRoute | string) =>

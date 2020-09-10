@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/dist/client/router';
 import { getAllTemplatesIDs, getTemplate } from '../../lib/templates';
-import { Template } from '../../app/template/template.component';
-import { TemplateNotFound } from '../../app/template/template-not-found/template-not-found.component';
+import { Template } from '../../app/templates/template.component';
+import { TemplateNotFound } from '../../app/templates/template-not-found/template-not-found.component';
 
 export interface TemplateData {
   id: string;
