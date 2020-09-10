@@ -43,6 +43,11 @@ export const Navigation = () => {
             </Link>
           </NavigationItem>
           <NavigationItem>
+            <Link href={getInternalLink(AppRoute.TEMPLATE)}>
+              <NavigationLink>Template</NavigationLink>
+            </Link>
+          </NavigationItem>
+          <NavigationItem>
             <Link href={getInternalLink(AppRoute.HOW_TO_CONTRIBUTE)}>
               <NavigationLink>How to contribute</NavigationLink>
             </Link>

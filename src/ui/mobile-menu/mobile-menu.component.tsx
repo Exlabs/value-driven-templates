@@ -28,6 +28,11 @@ export const MobileMenu = () => {
           </Link>
         </StyledListItem>
         <StyledListItem onClick={handleOnClick}>
+          <Link href={getInternalLink(AppRoute.TEMPLATE)}>
+            <StyledLink>TEMPLATE</StyledLink>
+          </Link>
+        </StyledListItem>
+        <StyledListItem onClick={handleOnClick}>
           <Link href={getInternalLink(AppRoute.HOW_TO_CONTRIBUTE)}>
             <StyledLink>HOW TO CONTRIBUTE</StyledLink>
           </Link>
