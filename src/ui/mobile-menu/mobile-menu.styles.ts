@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledNav = styled.nav`
+export const StyledNav = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +10,7 @@ export const StyledNav = styled.nav`
   width: 100%;
   padding: 10px 20px;
   z-index: 9999;
+  overflow: hidden;
 
   & > .navigation {
     padding-top: 10px;
@@ -25,9 +27,9 @@ export const StyledList = styled.ul`
   }
 `;
 
-export const StyledListItem = styled.li`
+export const StyledListItem = styled(motion.li)`
   border-bottom: 1px solid ${({ theme }) => theme.color.gray400};
-  padding: 10px 0;
+  padding: 20px 0;
 `;
 
 export const StyledLink = styled.a`

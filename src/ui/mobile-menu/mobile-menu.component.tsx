@@ -14,25 +14,52 @@ export const MobileMenu = () => {
   };
 
   return (
-    <StyledNav>
+    <StyledNav
+      initial={{
+        height: 0,
+      }}
+      animate={{
+        height: '100vh',
+        transition: {
+          duration: 0.3,
+          easings: true,
+        },
+      }}
+    >
       <Navigation />
       <StyledList>
-        <StyledListItem onClick={handleOnClick}>
+        <StyledListItem
+          onClick={handleOnClick}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.5, easings: true, delay: 0.2 },
+          }}
+        >
           <Link href={getInternalLink(AppRoute.HOME)}>
             <StyledLink>HOME</StyledLink>
           </Link>
         </StyledListItem>
-        <StyledListItem onClick={handleOnClick}>
+        <StyledListItem
+          onClick={handleOnClick}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.5, easings: true, delay: 0.3 },
+          }}
+        >
           <Link href={getInternalLink(AppRoute.ABOUT)}>
             <StyledLink>ABOUT</StyledLink>
           </Link>
         </StyledListItem>
-        <StyledListItem onClick={handleOnClick}>
-          <Link href={getInternalLink(AppRoute.TEMPLATE)}>
-            <StyledLink>TEMPLATE</StyledLink>
-          </Link>
-        </StyledListItem>
-        <StyledListItem onClick={handleOnClick}>
+        <StyledListItem
+          onClick={handleOnClick}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.5, easings: true, delay: 0.4 },
+          }}
+        >
           <Link href={getInternalLink(AppRoute.HOW_TO_CONTRIBUTE)}>
             <StyledLink>HOW TO CONTRIBUTE</StyledLink>
           </Link>

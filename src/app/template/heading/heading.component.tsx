@@ -28,7 +28,7 @@ export const TemplateHeading = () => {
             To achieve consistency, we try to stick to the same template as possible.
           </Description>
         </NumberedText>
-        <Link href="" type="primaryButton">
+        <Link href={`${process.env.ASSET_PREFIX}/templates/adr`} type="primaryButton">
           Check out the example
         </Link>
       </TextContainer>
