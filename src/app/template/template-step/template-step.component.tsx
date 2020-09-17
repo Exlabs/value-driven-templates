@@ -47,12 +47,12 @@ export const TemplateStep = ({ icon, title, description }: TemplateStepProps) =>
             opacity: 0,
           }}
           animate={{
-            height: 'fit-content',
-            minHeight: '100%',
+            height: 'calc(100% + 4px)',
+            minHeight: 'calc(100% + 2px)',
             opacity: 1,
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.4,
             easings: true,
           }}
         >
