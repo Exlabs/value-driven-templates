@@ -7,79 +7,37 @@ export const StepsContainer = () => {
   return (
     <StyledContainer>
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description="Write a few words that describe the selected tool."
         title="1. Short introduction"
         icon="extension"
       />
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description="Who will benefit the most from this tool is it developer, architect, project manager?"
         title="2. Target"
         icon="profile"
       />
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description=" Theoretical way of using selected tool."
         title="3. How to use it"
         icon="info"
       />
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description=" Write a case study of usage selected tool."
         title="4. Practical example"
         icon="calculator"
       />
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description="For example software which helps with using tool, e.g. software for making C4."
         title="5. Available tools (optional)"
         icon="toolbox"
       />
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description="Summarize the most important things from the selected tool in the shortest way."
         title="6. Takeaway"
         icon="trophy"
       />
       <TemplateStep
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et ex laoreet,
-            tempus libero ut, dapibus sapien. Ut id lacus eu nulla malesuada efficitur.
-            Cras ornare semper quam non euismod. Vestibulum dictum diam mi, a vulputate
-            tortor pharetra a. Vivamus auctor rhoncus erat. Aenean auctor velit non tellus
-            bibendum, sit amet pellentesque purus gravida. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Cras et ex laoreet, tempus libero ut, dapibus
-            sapien. Ut id lacus eu nulla malesuada efficitur."
+        description="If you’ve used any external sources, link them here."
         title="7. Sources"
         icon="link"
       />
