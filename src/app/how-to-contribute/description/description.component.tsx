@@ -11,6 +11,8 @@ import {
 } from './description.styles';
 import { NumberedText } from '../../about/numbered-text/numbered-text.component';
 import { useDeviceDetect } from '../../../hooks/use-device-detect/use-device-detect.hook';
+import { Link } from '../../../ui/link/link.component';
+import { AppRoute } from '../../../router/app-routes';
 
 export const Description = () => {
   const { isMobile } = useDeviceDetect();
@@ -25,10 +27,14 @@ export const Description = () => {
           <NumberedText number="01" rightPosition={false}>
             <SectionTitle>Create the content</SectionTitle>
             <SectionText>
-              Inside src/content/articles directory create a new markdown file with the
-              selected filename. Inside markdown file, You can write the content of Your
-              article, remember article title, description, and image, will be added in
-              the next step.
+              Inside <span>src/content/templates</span> directory create a new markdown
+              file with the selected filename. File name will be selected as template id.
+              Inside markdown file, You can write the content of the value engineering
+              template. Please remember to stick to our template, which can be found
+              <Link href={`${process.env.ASSET_PREFIX}/${AppRoute.TEMPLATE}`}>
+                {' '}
+                here.
+              </Link>
             </SectionText>
           </NumberedText>
         </SectionTextContainer>
@@ -55,10 +61,15 @@ export const Description = () => {
             <SectionTitle>Add template metadata</SectionTitle>
             <SectionText>
               Go to src/content/templates.json and add a new object with proper metadata
-              for Your article, where fileName is just a plain name without extension of
-              Your article content markdown file, imageUrl is a static file taken from the
-              public directory or dynamic URL. Lastly, add Your nickname in the author
-              field.
+              for Your template, where id is a content file name without extension. To
+              select icon, please enter on{' '}
+              <Link
+                external
+                href="https://www.manypixels.co/gallery/?color=6246ea&page=1&style=twoColor"
+              >
+                this link
+              </Link>
+              , select your icon and upload it to <span>public/icons/templates</span>.
             </SectionText>
           </NumberedText>
         </SectionTextContainer>
@@ -68,7 +79,7 @@ export const Description = () => {
           <NumberedText number="03" rightPosition={false}>
             <SectionTitle>Pull Request</SectionTitle>
             <SectionText>
-              That’s it! Well done, now You can create a new Pull Request and wait for
+              That’s it! Well done, now You can create a new Pull Request and wait for our
               approval!
             </SectionText>
           </NumberedText>
